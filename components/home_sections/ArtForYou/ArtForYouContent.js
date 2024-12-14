@@ -6,7 +6,9 @@ import {
     Image,
     Animated,
     Text,
-    Platform
+    Platform,
+    Lazy,
+    Suspense
 } from "react-native";
 
 const slideLeftGif = require("../../../assets//slideLeft.gif");
@@ -14,6 +16,7 @@ const slideLeftGif = require("../../../assets//slideLeft.gif");
 export default function ArtForYouContent({ fadeAnim, imageChunks, scrollViewRef, isOverlayVisible, handleScrollEnd, handleImagePress, handleUserActivity }) {
     return(
         <View style={styles.imageContainer}>
+            
             <ScrollView
                 horizontal
                 ref={scrollViewRef}
